@@ -48,7 +48,7 @@ let renderCard = (number) => {
   }
 };
 
-//выбор уровня для генирации карт
+//выбор уровня для генерации карт
 let chooseLevel = (level) => {
   switch (level) {
     case "Простой":
