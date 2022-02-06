@@ -2,12 +2,13 @@ const pushbutton = document.getElementById("button");
 const level = document.getElementById("level__list");
 const wrapperGame = document.querySelector(".game");
 
-let levels = document.querySelectorAll(".level");
+let levels = document.querySelectorAll(".beginning__level_element");
 
 levels.forEach((level) => {
   level.addEventListener("click", () => {
     levels.forEach((lvl) => lvl.classList.remove("active_game"));
     level.classList.add("active_game");
+    document.getElementById("rhomb").style.display = "none";
   });
 });
 
@@ -48,7 +49,7 @@ let renderCard = (number) => {
   }
 };
 
-//выбор уровня для генирации карт
+//выбор уровня для генерации карт
 let chooseLevel = (level) => {
   switch (level) {
     case "Простой":
@@ -81,4 +82,6 @@ let clearingCards = () => {
   wrapperGame.style.display = "none";
   wrapperGame.innerHTML = "";
   wrapperGame.className = "game";
+  document.getElementById("rhomb").style.display = "initial";
+  levels.forEach((lvl) => lvl.classList.remove("active_game"));
 };
