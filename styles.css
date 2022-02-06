@@ -3,16 +3,16 @@ body {
   background: url('./img/Background.png');
   background-color: #019072;
   overflow: hidden;
+  width: 100%;
 }
 
 .beginning {
   position: relative;
   margin: 0 auto;
   padding: 12.8vh 0 0 103px;
-  width: auto;
   max-width: 1440px;
-  height: 100vh;
-  box-sizing: border-box;
+  height: 100%;
+  width: 100%
 }
 
 .game {
@@ -30,20 +30,20 @@ body {
 
 .hard{ width: 70%;}
 
-.beginning_title {
+.beginning__title {
   margin: 0 0 0.6vh 0;
   font: bold 57px/67px Roboto_bold, arial, helvetica, sans-serif;
   color: #fff;
 }
 
-.beginning_subtitle {
+.beginning__subtitle {
   margin: 0 0 6vh 0;
   padding-left: 3px;
   font: bold 19px/22px Roboto_bold, arial, helvetica, sans-serif;
   color: #fff;
 }
 
-.level__list {
+.beginning__level {
   display: flex;
   flex-direction: column;
   margin-top: 0;
@@ -53,7 +53,7 @@ body {
   list-style: none;
 }
 
-.level {
+.beginning__level_element {
   display: inline-block;
   position: relative;
   margin: 0 auto 28px auto;
@@ -62,12 +62,22 @@ body {
   cursor: pointer;
 }
 
+.beginning__level i {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 92%;
+  top: 42%;
+  background: #d62b2e;
+  transform: rotate(45deg);
+}
+
 .active_game::after {
   position: absolute;
   content: '';
   width: 18px;
   height: 18px;
-  left: -45px;
+  right: 108%;
   top: calc(50% - 5px);
   background: #d62b2e;
   transform: rotate(45deg);
@@ -102,8 +112,8 @@ body {
 }
 
 .card-2 {
-  left: 74.2%;
-  top: 54vh;
+  left: 57vw;
+  top: 55vh;
   transform: rotate(39.26deg);
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -160,3 +170,209 @@ body {
   background-position: center center;
   transform: rotateY(180deg);
 }
+
+@media (max-width: 1370px) {
+
+  .beginning__level i {
+    right: 92%;
+    top: 42%
+  }
+
+  .hard { width: 90%; }
+
+  .card-2 {
+    left: 75vw;
+    top: 58vh;
+  }
+
+  .flip-card {
+    width: 190px;
+    min-width: 190px;
+  }
+}
+
+@media (max-width: 1204px) {
+
+  .beginning__level i {
+    right: 89%;
+    top: 40%
+  }
+
+  .beginning { box-sizing: border-box; }
+
+  .middle { width: 70%; }
+
+  .card-2 { left: 68.2%; }
+
+  .flip-card {
+    width: 16vw;
+    min-width: 160px;
+    height: 25vw;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .beginning__level i { right: 87%; }
+
+  .middle { width: 65%; }
+
+  .flip-card {
+    width: 14vw;
+    height: 31vw;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .beginning__level i {
+    right: 85%;
+    top: 51%
+  }
+
+  .beginning__title{ font-size: 5.5vw;}
+
+  .beginning__level {
+    padding-top: 4vh;
+    margin-bottom: 0;
+  }
+
+  .beginning__level_element {
+    line-height: 15px;
+    padding-bottom: 3vh;
+  }
+
+  .card-1{
+    left: 70vw;
+    top: 56vh;
+  }
+
+  .card-2 {
+    left: 79vw;
+    top: 61vh;
+  }
+
+  .flip-card {
+    width: 14vw;
+    height: 21vw;
+  }
+}
+@media (max-width: 850px) {
+
+  .beginning__level i {
+    right: 64%;
+    top: 64%
+  }
+
+  .beginning { padding: 38.8vh 0 0 0; }
+
+  .beginning__title { text-align: center; }
+
+  .beginning__subtitle { text-align: center; }
+
+  .beginning__level {
+    padding-left: 0;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .button { margin: 0 auto; }
+
+  .card-1 {
+    left: 36.8%;
+    top: 13vh;
+  }
+
+  .card-2 {
+    left: 40.2%;
+    top: 12vh;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .beginning__level i {
+    right: 92%;
+    top: 42%
+  }
+
+  .middle { width: 90%; }
+
+  .hard { width: 69%; }
+
+  .flip-card {
+    width: 20vw;
+    height: 24vw;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .beginning__level i {
+    right: 67%;
+    top: 64%
+  }
+
+  .beginning { padding-top: 30vh;}
+
+  .beginning__title { font-size: 9vw; }
+
+  .beginning__subtitle {
+    font-size: 4vw;
+    margin-bottom: 3vh;
+  }
+
+  .beginning__level_element { font-size: 9vw; }
+
+  .flip-card {
+    width: 23vw;
+    height: 35vw;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .beginning__level i {
+    right: 79%;
+    top: 68%
+  }
+
+  .beginning { padding-top: 22vh;}
+
+  .beginning__title {
+    line-height: 1.2em;
+    font-size: 11vw;
+    }
+
+    .beginning__subtitle { font-size: 6vw; }
+
+    .beginning__level{ margin-bottom: 2vh; }
+
+    .beginning__level_element{
+      font-size: 12vw;
+      padding-bottom: 1vh;
+    }
+
+    .card-1 { top: 7vh; }
+
+    .card-2 {
+      top: 7vh;
+      left: 35vw;
+    }
+
+    .flip-card {
+      width: 25vw;
+      height: 49vw;
+    }
+
+    .button { padding: 20px 50px; }
+
+    .simple {width: 95%; }
+
+    .middle {width: 100%; }
+
+    .hard { width: 100%;}
+  }
