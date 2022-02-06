@@ -100,7 +100,7 @@ body {
   content: '';
   width: calc(218 / 1440 * 100%);
   height: calc(341 / 1024 * 100%);
-  background: no-repeat url('img/card.svg');
+  background: no-repeat url('img/card.png');
   background-size: contain;
 }
 
@@ -150,14 +150,14 @@ body {
 
 .flip-card__front {
   position: absolute;
-  background: no-repeat url('img/card.svg');
+  background: no-repeat url('img/card.png');
   background-size: contain;
   background-position: center center;
 }
 
 .flip-card__back {
   position: absolute;
-  background: no-repeat url('img/gameOver.svg');
+  background: no-repeat url('img/gameOver.png');
   background-size: contain;
   background-position: center center;
   transform: rotateY(180deg);
@@ -165,7 +165,7 @@ body {
 
 .flip-card__back-bug {
   position: absolute;
-  background: no-repeat url('img/bagCard.svg');
+  background: no-repeat url('img/bagCard.png');
   background-size: contain;
   background-position: center center;
   transform: rotateY(180deg);
